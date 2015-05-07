@@ -1,0 +1,16 @@
+﻿<micro:CaliburnApplication
+    x:Class="BandsInTown.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:BandsInTown"
+    xmlns:micro="using:Caliburn.Micro">
+    <micro:CaliburnApplication.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Assets/Styles/CommonStyles.xaml"/>
+                <ResourceDictionary Source="/Assets/Styles/FlyoutStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </micro:CaliburnApplication.Resources>
+
+</micro:CaliburnApplication>

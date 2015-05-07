@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BandsInTown", "BandsInTown\BandsInTown.csproj", "{41512CAA-A8FC-48BF-987E-9EAA13E194E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpManager", "HttpManager\HttpManager.csproj", "{469D7008-1F37-43F6-936C-B56D354B239A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM = Debug|ARM
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|ARM = Release|ARM
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{41512CAA-A8FC-48BF-987E-9EAA13E194E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41512CAA-A8FC-48BF-987E-9EAA13E194E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41512CAA-A8FC-48BF-987E-9EAA13E194E0}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{41512CAA-A8FC-48BF-987E-9EAA13E194E0}.Debug|ARM.ActiveCfg = Debug|ARM
+		{41512CAA-A8FC-48BF-987E-9EAA13E194E0}.Debug|ARM.Build.0 = Debug|ARM
+		{41512CAA-A8FC-48BF-987E-9EAA13E194E0}.Debug|ARM.Deploy.0 = Debug|ARM
+		{41512CAA-A8FC-48BF-987E-9EAA13E194E0}.Debug|x86.ActiveCfg = Debug|x86
+		{41512CAA-A8FC-48BF-987E-9EAA13E194E0}.Debug|x86.Build.0 = Debug|x86
+		{41512CAA-A8FC-48BF-987E-9EAA13E194E0}.Debug|x86.Deploy.0 = Debug|x86
+		{41512CAA-A8FC-48BF-987E-9EAA13E194E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41512CAA-A8FC-48BF-987E-9EAA13E194E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41512CAA-A8FC-48BF-987E-9EAA13E194E0}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{41512CAA-A8FC-48BF-987E-9EAA13E194E0}.Release|ARM.ActiveCfg = Release|ARM
+		{41512CAA-A8FC-48BF-987E-9EAA13E194E0}.Release|ARM.Build.0 = Release|ARM
+		{41512CAA-A8FC-48BF-987E-9EAA13E194E0}.Release|ARM.Deploy.0 = Release|ARM
+		{41512CAA-A8FC-48BF-987E-9EAA13E194E0}.Release|x86.ActiveCfg = Release|x86
+		{41512CAA-A8FC-48BF-987E-9EAA13E194E0}.Release|x86.Build.0 = Release|x86
+		{41512CAA-A8FC-48BF-987E-9EAA13E194E0}.Release|x86.Deploy.0 = Release|x86
+		{469D7008-1F37-43F6-936C-B56D354B239A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{469D7008-1F37-43F6-936C-B56D354B239A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{469D7008-1F37-43F6-936C-B56D354B239A}.Debug|ARM.ActiveCfg = Debug|ARM
+		{469D7008-1F37-43F6-936C-B56D354B239A}.Debug|ARM.Build.0 = Debug|ARM
+		{469D7008-1F37-43F6-936C-B56D354B239A}.Debug|x86.ActiveCfg = Debug|x86
+		{469D7008-1F37-43F6-936C-B56D354B239A}.Debug|x86.Build.0 = Debug|x86
+		{469D7008-1F37-43F6-936C-B56D354B239A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{469D7008-1F37-43F6-936C-B56D354B239A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{469D7008-1F37-43F6-936C-B56D354B239A}.Release|ARM.ActiveCfg = Release|ARM
+		{469D7008-1F37-43F6-936C-B56D354B239A}.Release|ARM.Build.0 = Release|ARM
+		{469D7008-1F37-43F6-936C-B56D354B239A}.Release|x86.ActiveCfg = Release|x86
+		{469D7008-1F37-43F6-936C-B56D354B239A}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
