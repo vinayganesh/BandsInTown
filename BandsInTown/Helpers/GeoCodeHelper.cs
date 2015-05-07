@@ -10,8 +10,6 @@ namespace BandsInTown.Helpers
 {
     public class GeoCodeHelper
     {
-        private const string DEFAULT_LOCATION = "SAN JOSE,CA";
-
         public static string GetGeoIp()
         {
             var l = Windows.Networking.Connectivity.NetworkInformation.GetHostNames();
@@ -49,7 +47,7 @@ namespace BandsInTown.Helpers
                 return k.Address.Town + "," + GetStateAbbreviation.GetStateByName(k.Address.Region);
             }
 
-            return DEFAULT_LOCATION;
+            return null;
         }
     }
 }
