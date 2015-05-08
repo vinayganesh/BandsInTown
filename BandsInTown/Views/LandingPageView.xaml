@@ -23,9 +23,8 @@
                            HorizontalAlignment="Left"
                            Style="{StaticResource TitleRedTextBlockStyle}"
                            Margin="14,12" />
-                        <TextBox VerticalAlignment="Top"/>
-                        <Button micro:Message.Attach="[Event Tapped] = [Action SearchArtist]" 
-                                Content="Search"/>
+                        <TextBox Text="{Binding Path=ArtistName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                 micro:Message.Attach="[Event KeyUp] = [Action SearchArtist($executionContext)]" VerticalAlignment="Top"/>
                     </StackPanel>
                     
                 </Grid>
