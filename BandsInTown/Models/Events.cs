@@ -1,47 +1,43 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace BandsInTown.Models
 {
     public class Events
     {
-        public string Id { get; set; }
-        public string Title { get; set; }
-        public string Date { get; set; }
-        public string TicketUrl { get; set; }
-        public string TicketType { get; set; }
-        public string TicketStatus { get; set; }
-        public string OnSaleDataTime { get; set; }
-        public string FbrsvpUrl { get; set; }
-        public string Description { get; set; }
-        public List<Artist> Artists { get; set; }
-        public Venue Venur { get; set; }
-        public string FormattedLocation { get; set; }
-        public string FormattedDateTime { get; set; }
+        public string id { get; set; }
+        public string title { get; set; }
+        public string datetime { get; set; }
+        public string ticket_url { get; set; }
+        public string ticket_type { get; set; }
+        public string ticket_status { get; set; }
+        public string on_sale_datetime { get; set; }
+        public string facebook_rsvp_url { get; set; }
+        public string description { get; set; }
+        public List<Artist> artists { get; set; }
+        public Venue venue { get; set; }
+        public string formatted_location { get; set; }
+        public string formatted_datetime { get; set; }
 
         public class Artist
         {
-            public string Website { get; set; }
-            public string Name { get; set; }
-            public string ImageUrl { get; set; }
-            public string ThumbNailUrl { get; set; }
-            public string FbTourDates { get; set; }
-            public string Mbid { get; set; }
-            public string Url { get; set; }
-            public string TrackerCount { get; set; }
+            public string website { get; set; }
+            public string name { get; set; }
+            public string image_url { get; set; }
+            public string thumb_url { get; set; }
+            public string facebook_tour_dates_url { get; set; }
+            public string mbid { get; set; }
+            public string url { get; set; }
+            public string tracker_count { get; set; }
         }
 
         public class Venue
         {
-            public string Country { get; set; }
-            public string Name { get; set; }
-            public double Latitude { get; set; }
-            public string Region { get; set; }
-            public double Longitude { get; set; }
-            public string City { get; set; }
+            public string country { get; set; }
+            public string name { get; set; }
+            public double latitude { get; set; }
+            public string region { get; set; }
+            public double longitude { get; set; }
+            public string city { get; set; }
         }
     }
 }
