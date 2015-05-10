@@ -82,6 +82,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\BackgroundTask\BackgroundTaskConfiguration.cs" />
+    <Compile Include="Helpers\BackgroundTask\BackgroundTaskHelper.cs" />
     <Compile Include="Helpers\Constants.cs" />
     <Compile Include="Helpers\GeoCodeHelper.cs" />
     <Compile Include="Helpers\GetStateAbbreviation.cs" />
