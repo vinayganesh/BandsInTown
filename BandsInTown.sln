@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BandsInTown", "BandsInTown\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpManager", "HttpManager\HttpManager.csproj", "{469D7008-1F37-43F6-936C-B56D354B239A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backgrounder", "Backgrounder\Backgrounder.csproj", "{D079B931-8BA9-413F-A4B5-918C3DC30388}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,18 @@ Global
 		{469D7008-1F37-43F6-936C-B56D354B239A}.Release|ARM.Build.0 = Release|ARM
 		{469D7008-1F37-43F6-936C-B56D354B239A}.Release|x86.ActiveCfg = Release|x86
 		{469D7008-1F37-43F6-936C-B56D354B239A}.Release|x86.Build.0 = Release|x86
+		{D079B931-8BA9-413F-A4B5-918C3DC30388}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D079B931-8BA9-413F-A4B5-918C3DC30388}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D079B931-8BA9-413F-A4B5-918C3DC30388}.Debug|ARM.ActiveCfg = Debug|ARM
+		{D079B931-8BA9-413F-A4B5-918C3DC30388}.Debug|ARM.Build.0 = Debug|ARM
+		{D079B931-8BA9-413F-A4B5-918C3DC30388}.Debug|x86.ActiveCfg = Debug|x86
+		{D079B931-8BA9-413F-A4B5-918C3DC30388}.Debug|x86.Build.0 = Debug|x86
+		{D079B931-8BA9-413F-A4B5-918C3DC30388}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D079B931-8BA9-413F-A4B5-918C3DC30388}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D079B931-8BA9-413F-A4B5-918C3DC30388}.Release|ARM.ActiveCfg = Release|ARM
+		{D079B931-8BA9-413F-A4B5-918C3DC30388}.Release|ARM.Build.0 = Release|ARM
+		{D079B931-8BA9-413F-A4B5-918C3DC30388}.Release|x86.ActiveCfg = Release|x86
+		{D079B931-8BA9-413F-A4B5-918C3DC30388}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
