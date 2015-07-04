@@ -42,7 +42,7 @@ namespace BandsInTown.Helpers.BackgroundTask
             }
             else
             {
-                Debug.WriteLine("Background access denied"););
+                Debug.WriteLine("Background access denied");
             }
 
             return task;

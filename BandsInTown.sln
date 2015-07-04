@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpManager", "HttpManager\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backgrounder", "Backgrounder\Backgrounder.csproj", "{D079B931-8BA9-413F-A4B5-918C3DC30388}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BandSettings", "BandSettings\BandSettings.csproj", "{D525C408-D924-453C-B7EA-BA0846887256}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,18 +61,6 @@ Global
 		{D079B931-8BA9-413F-A4B5-918C3DC30388}.Release|ARM.Build.0 = Release|ARM
 		{D079B931-8BA9-413F-A4B5-918C3DC30388}.Release|x86.ActiveCfg = Release|x86
 		{D079B931-8BA9-413F-A4B5-918C3DC30388}.Release|x86.Build.0 = Release|x86
-		{D525C408-D924-453C-B7EA-BA0846887256}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D525C408-D924-453C-B7EA-BA0846887256}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D525C408-D924-453C-B7EA-BA0846887256}.Debug|ARM.ActiveCfg = Debug|ARM
-		{D525C408-D924-453C-B7EA-BA0846887256}.Debug|ARM.Build.0 = Debug|ARM
-		{D525C408-D924-453C-B7EA-BA0846887256}.Debug|x86.ActiveCfg = Debug|x86
-		{D525C408-D924-453C-B7EA-BA0846887256}.Debug|x86.Build.0 = Debug|x86
-		{D525C408-D924-453C-B7EA-BA0846887256}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D525C408-D924-453C-B7EA-BA0846887256}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D525C408-D924-453C-B7EA-BA0846887256}.Release|ARM.ActiveCfg = Release|ARM
-		{D525C408-D924-453C-B7EA-BA0846887256}.Release|ARM.Build.0 = Release|ARM
-		{D525C408-D924-453C-B7EA-BA0846887256}.Release|x86.ActiveCfg = Release|x86
-		{D525C408-D924-453C-B7EA-BA0846887256}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
