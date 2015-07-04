@@ -12,5 +12,6 @@ namespace BandsInTown.Helpers
         public static readonly string ArtistsUrl = "artists/";
         public const string BandsInTownKey = "WindowsPhone";
         public const string APIVersion = "api_version=2.0";
+        public const int DefaultRadius = 50;
     }
 }

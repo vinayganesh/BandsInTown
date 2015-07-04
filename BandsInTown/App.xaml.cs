@@ -82,6 +82,7 @@ namespace BandsInTown
         {
             _container.Singleton<ISearchArtistService, SearchArtistService>();
             _container.Singleton<ISearchEventsService, SearchEventsService>();
+            _container.Singleton<IRecommendedArtistsService, RecommendedArtistsService>();
         }
 
         private void RegisterViewModels()

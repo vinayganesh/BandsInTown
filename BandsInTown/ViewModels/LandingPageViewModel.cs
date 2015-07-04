@@ -13,46 +13,63 @@ using Caliburn.Micro;
 
 namespace BandsInTown.ViewModels
 {
-    public class LandingPageViewModel:PropertyChangedBase
+    public class LandingPageViewModel : Screen, IHandle<PropertyChangedBase>
     {
-        private readonly ISearchArtistService _searchArtistService;
+        private readonly IRecommendedArtistsService _recommendedArtistsService;
 
-        private string _artistName;
+        private bool _showProgressBar;
+        private List<RecommendedArtists> _recommendedArtists;
 
-        //Dependency Injection
-        public LandingPageViewModel(ISearchArtistService searchArtistService)
+        public LandingPageViewModel(IRecommendedArtistsService recommendedArtistsService)
         {
-            _searchArtistService = searchArtistService;
+            _recommendedArtistsService = recommendedArtistsService;
         }
 
-        //this is used for binding data
-        public string ArtistName
+        #region Properties
+
+        public bool ShowProgressBar
         {
-            get { return _artistName; }
+            get { return _showProgressBar; }
             set
             {
-                _artistName = value;
-                NotifyOfPropertyChange(() => ArtistName);
+                _showProgressBar = value;
+                NotifyOfPropertyChange(() => ShowProgressBar);
             }
         }
 
-        //Search for artists
-        public async void SearchArtist(ActionExecutionContext context)
+        public List<RecommendedArtists> RecommendedArtists
+        {
+            get { return _recommendedArtists; }
+            set
+            {
+                _recommendedArtists = value;
+                NotifyOfPropertyChange(() => RecommendedArtists);
+            }
+        }
+
+        #endregion
+
+        protected async override void OnInitialize()
         {
             try
             {
-                var eventArgs = context.EventArgs as KeyRoutedEventArgs;
-                if (eventArgs != null && eventArgs.Key == VirtualKey.Enter)
-                {
-                    var artist = await _searchArtistService.SearchArtist(ArtistName);
-                }
+                ShowProgressBar = true;
+                var x = await _recommendedArtistsService.GetRecommendedArtists();
+                RecommendedArtists = x;
             }
             catch (Exception ex)
             {
                 Debug.WriteLine(ex.Message);
             }
-            
+            finally
+            {
+                ShowProgressBar = false;
+            }
         }
 
+        public void Handle(PropertyChangedBase message)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
