@@ -18,6 +18,7 @@ namespace BandsInTown.ViewModels
         private readonly IRecommendedArtistsService _recommendedArtistsService;
 
         private bool _showProgressBar;
+        private int _selectedPivotIndex;
         private List<RecommendedArtists> _recommendedArtists;
 
         public LandingPageViewModel(IRecommendedArtistsService recommendedArtistsService)
@@ -37,6 +38,16 @@ namespace BandsInTown.ViewModels
             }
         }
 
+        public int SelectedPivotIndex
+        {
+            get { return _selectedPivotIndex; }
+            set
+            {
+                _selectedPivotIndex = value;
+                NotifyOfPropertyChange(() => SelectedPivotIndex);
+            }
+        }
+
         public List<RecommendedArtists> RecommendedArtists
         {
             get { return _recommendedArtists; }
@@ -51,6 +62,7 @@ namespace BandsInTown.ViewModels
 
         protected async override void OnInitialize()
         {
+            Debug.WriteLine(SelectedPivotIndex);
             try
             {
                 ShowProgressBar = true;
@@ -65,6 +77,21 @@ namespace BandsInTown.ViewModels
             {
                 ShowProgressBar = false;
             }
+        }
+
+        protected void PivotSelectionChanged(int i)
+        {
+            SelectedPivotIndex = i;
+
+            if(SelectedPivotIndex==0)
+            {
+                //get recommended artsits
+            }
+            else if(SelectedPivotIndex==1)
+            {
+                //get popular events
+            }
+
         }
 
         public void Handle(PropertyChangedBase message)

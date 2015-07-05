@@ -74,7 +74,9 @@
 
     <Border Padding="{StaticResource PageNormalMargin}" Style="{StaticResource RootPageBorderStyle}" >
         <Grid x:Name="LayoutGrid">
-            <Pivot Title="BandsInTown" Margin="-19,0,0,0" FontSize="32" Style="{StaticResource PivotStyle1}">
+            <Pivot Title="BandsInTown" Margin="-19,0,0,0" FontSize="32" Style="{StaticResource PivotStyle1}"
+                  SelectedIndex="{Binding SelectedPivotIndex}"
+                  micro:Message.Attach="[Event SelectionChanged] = [Action PivotSelectionChanged($this.SelectedIndex)]">
                 <!--Recommended Artists Pivot-->
                 <PivotItem Header="Recommended Artists" Margin="10,0,-0.167,-0.833">
                     <Grid>
@@ -111,18 +113,24 @@
                 </PivotItem>
 
                 <!--Popular Events Pivot-->
-                <PivotItem Header="Popular Events">
+                <PivotItem Header="Popular Events" Margin="10,0,-0.167,-0.833">
                     <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="90"/>
-                            <RowDefinition Height="80"/>
-                            <RowDefinition Height="*"/>
-                        </Grid.RowDefinitions>
-
-                        <!--<TextBlock Grid.Row="0" Text="BandsInTown" VerticalAlignment="Top" HorizontalAlignment="Left"
-                                Style="{StaticResource TitleRedTextBlockStyle}" Margin="14,12" />-->
-
                         <ProgressBar IsIndeterminate="{Binding ShowProgressBar}"/>
+                        <GridView ScrollViewer.VerticalScrollBarVisibility="Hidden" 
+                              HorizontalAlignment="Left" 
+                              ItemsSource="{Binding RecommendedArtists}" 
+                              Background="Black">
+                            <GridView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid Margin="10,10,0,0">
+                                        <StackPanel Orientation="Vertical">
+                                            <Image Source="{Binding Image_Url}" Width="80" Height="80"/>
+                                            <TextBlock Text="{Binding Name}" FontSize="10"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </DataTemplate>
+                            </GridView.ItemTemplate>
+                        </GridView>
                     </Grid>
                 </PivotItem>
                 
