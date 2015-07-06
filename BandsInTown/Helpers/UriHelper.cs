@@ -1,5 +1,6 @@
 ﻿using System;
-
+using System.Diagnostics;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace BandsInTown.Helpers
@@ -38,7 +39,7 @@ namespace BandsInTown.Helpers
         {
             var urlRequest = "http://api.bandsintown.com/artists/" + artistName + "/" + "events/search?format=json" + "&artist_id=" + artistId + "&" + Constants.APIVersion + "&app_id=" + Constants.BandsInTownKey + "&date=" + startDate + "," + endDate + "&location=" + location;
             var uri = new Uri(urlRequest);
-
+            
             return uri;
            
         }
@@ -57,9 +58,15 @@ namespace BandsInTown.Helpers
         public static async Task<Uri> GetPopularEventsNearby()
         {
             string location = await GeoCodeHelper.GetLocationFromLatLong();
-
+         
+            //Url encoding skips special characters
+            location = Helpers.UrlEncodeHelper.UrlEncode(location);
+            //Url encode skips space
+            location = location.Replace(' ', '+');
+         
             //https://app.bandsintown.com/events/popular?location=San+Francisco%2C+CA&radius=75&per_page=27&date=2015-07-02&authenticate=false
-            var urlRequest = "http://app.bandsintown.com/events/popular?location=" + location + "&radius=" + Constants.DefaultRadius + "&per_page=27&date=" + DateTime.Today.ToString("MM/dd/yy") + "&authenticate=false";
+            var urlRequest = "http://app.bandsintown.com/events/popular?location=" + location + "&radius=" + Constants.DefaultRadius + "&per_page=27&date=" + DateTime.Today.ToString("yyyy-MM-dd") + "&authenticate=false";
+            
             var uri = new Uri(urlRequest);
             return uri;
         }

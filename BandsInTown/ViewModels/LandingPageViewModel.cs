@@ -16,14 +16,22 @@ namespace BandsInTown.ViewModels
     public class LandingPageViewModel : Screen, IHandle<PropertyChangedBase>
     {
         private readonly IRecommendedArtistsService _recommendedArtistsService;
+        private readonly IPopularEventsService _popularEventsService;
+        private readonly ISearchEventsService _eventSearchService;
 
         private bool _showProgressBar;
         private int _selectedPivotIndex;
+
+        private List<Event> _popularEvents;
         private List<RecommendedArtists> _recommendedArtists;
 
-        public LandingPageViewModel(IRecommendedArtistsService recommendedArtistsService)
+        public LandingPageViewModel(IRecommendedArtistsService recommendedArtistsService,
+                                    IPopularEventsService popularEventsService,
+            ISearchEventsService searchEventService)
         {
             _recommendedArtistsService = recommendedArtistsService;
+            _popularEventsService = popularEventsService;
+            _eventSearchService = searchEventService;
         }
 
         #region Properties
@@ -58,6 +66,16 @@ namespace BandsInTown.ViewModels
             }
         }
 
+        public List<Event> PopularEvents
+        {
+            get { return _popularEvents; }
+            set
+            {
+                _popularEvents = value;
+                NotifyOfPropertyChange(() => PopularEvents);
+            }
+        }
+
         #endregion
 
         protected async override void OnInitialize()
@@ -79,19 +97,28 @@ namespace BandsInTown.ViewModels
             }
         }
 
-        protected void PivotSelectionChanged(int i)
+        protected async void PivotSelectionChanged(int i)
         {
             SelectedPivotIndex = i;
 
             if(SelectedPivotIndex==0)
             {
-                //get recommended artsits
+                if(RecommendedArtists==null)
+                {
+                    ShowProgressBar = true;
+                    var x = await _recommendedArtistsService.GetRecommendedArtists();
+                    RecommendedArtists = x;
+                }
             }
-            else if(SelectedPivotIndex==1)
+            else if (SelectedPivotIndex == 1)
             {
-                //get popular events
+                if(PopularEvents==null)
+                {
+                    ShowProgressBar = true;
+                    PopularEvents = await _popularEventsService.GetPopularEvents();
+                    ShowProgressBar = false;
+                }
             }
-
         }
 
         public void Handle(PropertyChangedBase message)

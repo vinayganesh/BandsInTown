@@ -83,6 +83,7 @@
     <Compile Include="BitResponseManager.cs" />
     <Compile Include="DataContract\ArtistContract.cs" />
     <Compile Include="DataContract\EventsContract.cs" />
+    <Compile Include="DataContract\PopularEventsContract.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

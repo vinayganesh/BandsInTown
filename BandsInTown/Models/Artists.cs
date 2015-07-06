@@ -8,7 +8,6 @@ namespace BandsInTown.Models
 {
     public class Artists
     {
-
         public string name { get; set; }
         public string image_url { get; set; }
         public string thumb_url { get; set; }

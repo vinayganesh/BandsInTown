@@ -7,6 +7,7 @@ using BandsInTown.IServices;
 using BandsInTown.Models;
 using System.Net.Http;
 using Newtonsoft.Json;
+using System.Diagnostics;
 
 namespace BandsInTown.Services
 {
@@ -20,6 +21,7 @@ namespace BandsInTown.Services
             var jsonMessage = await HttpManager.BitResponseManager.ReadResponse(response);
 
             var artistEvents = (List<Events>)JsonConvert.DeserializeObject(jsonMessage, typeof(List<Events>));
+
             return artistEvents;
 
         }
